@@ -6,7 +6,7 @@ const Table = () => {
    
     
     useEffect(()=>{
-        Axios.get("http://localhost:5000/api/getpurchase").then((res)=>{
+        Axios.get("http://localhost:5000/api/product").then((res)=>{
         //    console.log(res);
             setLists(res.data);
         })
@@ -20,9 +20,10 @@ const Table = () => {
             <table className='table'> 
                 <thead> 
                     <tr>
-                        <th>Branch</th>
+                    <th>Branch</th>
                         <th>Warehouse</th>
-                        <th>Supplier</th>
+                        <th>SupplierId</th>
+                        <th>SupplierName</th>
                         <th>Address</th>
                         <th>WorkOrderNo</th>
                         <th>OrderNo</th>
@@ -37,7 +38,8 @@ const Table = () => {
                             
                             <td data-label="Branch">{list.branch}</td>
                             <td data-label="Warehouse">{list.warehouse}</td>
-                            <td data-label="Supplier">{list.supplier}</td>
+                            <td data-label="SupplierId">{list.supplierId}</td>
+                            <td data-label="SupplierName">{list.supplierName}</td>
                             <td data-label="Address">{list.address}</td>
                             <td data-label="WorkOrderNo.">{list.workorderno}</td>
                             <td data-label="OrderNo.">{list.orderno}</td>
