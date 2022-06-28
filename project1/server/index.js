@@ -5,8 +5,7 @@ const mongoose = require("mongoose");
 const morgan = require("morgan");
 const cors = require("cors");
 // env file
-const dotenv = require('dotenv');
-dotenv.config({path:'./config.env'});
+require('dotenv').config()
 const DB = process.env.DATABASE;
 const PORT = process.env.PORT;
 
@@ -47,15 +46,19 @@ app.use("/api",getuser);
 
 
 // Database Connection
-mongoose.connect(DB,{
-    useNewUrlParser:true,
-    useCreateIndex:true,
-    useUnifiedTopalogy:true,
-    useFindAndModify:false
-}).then(()=>{
-    console.log("Database Connected Successfully");
-}).catch((err)=> console.log("Database Connection Failed"));
+// mongoose.connect(DB,{
+//     useNewUrlParser:true,
+//     useCreateIndex:true,
+//     useUnifiedTopalogy:true,
+//     useFindAndModify:false
+// }).then(()=>{
+//     console.log("Database Connected Successfully");
+// }).catch((err)=> console.log("Database Connection Failed"));
  
+// Database Connection
+mongoose.connect(DB,(err)=>{
+    console.log("Database Connected Successfully");
+});
 
 
 // Listen Port Number
