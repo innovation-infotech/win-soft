@@ -1,6 +1,7 @@
 import React from 'react';
 import Form from './components/Form';
 import Table from './components/Table';
+// import Search from './components/Search'
 
 import './App.css';
 function App() {
@@ -9,6 +10,9 @@ function App() {
       <div>
       <Form /> 
       <Table />
+     
+     
+      {/* <Search  /> */}
       </div>
      
     </div>

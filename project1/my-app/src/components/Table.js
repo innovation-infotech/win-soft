@@ -6,7 +6,7 @@ const Table = () => {
    
     
     useEffect(()=>{
-        Axios.get("http://localhost:5000/api/getpurchase").then((res)=>{
+        Axios.get("http://localhost:5000/api/product").then((res)=>{
         //    console.log(res);
             setLists(res.data);
         })
@@ -16,13 +16,14 @@ const Table = () => {
 
     return (
         <div className='container'>
-            <div className='table-responsive'>
+            <div className='col-lg-12 col-md-12 col-sm-12'>
             <table className='table'> 
                 <thead> 
                     <tr>
                         <th>Branch</th>
                         <th>Warehouse</th>
-                        <th>Supplier</th>
+                        <th>SupplierId</th>
+                        <th>SupplierName</th>
                         <th>Address</th>
                         <th>WorkOrderNo</th>
                         <th>OrderNo</th>
@@ -35,14 +36,15 @@ const Table = () => {
                         return(
                         <tr key={index}>
                             
-                            <td data-label="Branch">{list.branch}</td>
-                            <td data-label="Warehouse">{list.warehouse}</td>
-                            <td data-label="Supplier">{list.supplier}</td>
-                            <td data-label="Address">{list.address}</td>
-                            <td data-label="WorkOrderNo.">{list.workorderno}</td>
-                            <td data-label="OrderNo.">{list.orderno}</td>
-                            <td data-label="Gatepass">{list.gatepass}</td>
-                            <td data-label="DC.No.">{list.dcno}</td>
+                            <td>{list.branch}</td>
+                            <td>{list.warehouse}</td>
+                            <td>{list.supplierId}</td>
+                            <td>{list.supplierName}</td>
+                            <td>{list.address}</td>
+                            <td>{list.workorderno}</td>
+                            <td>{list.orderno}</td>
+                            <td>{list.gatepass}</td>
+                            <td>{list.dcno}</td>
                         </tr>
                         )
                        })}

@@ -10,19 +10,37 @@ app.use(cors());
 app.use(morgan("dev"));
 app.use(express.json());
 
-// Router
-const user = require("./routes/purchase");
-const purchase = require("./routes/purchase");
-const purchaseData = require("./routes/purchase");
-const branchData = require("./routes/purchase");
-const userData = require("./routes/purchase");
-const branch = require("./routes/purchase");
-app.use("/api",user);
-app.use("/api",purchase); 
-app.use("/api",branch);
-app.use("/api",purchaseData);
-app.use("/api",branchData);
-app.use("/api",userData);
+// Call Routes 
+//product
+const addproduct = require("./routes/api_routes");
+const getproduct = require("./routes/api_routes");
+
+//branch
+const addbranch =require('./routes/api_routes');
+const getbranch =require("./routes/api_routes");
+//user
+const adduser = require("./routes/api_routes");
+const getuser = require("./routes/api_routes");
+
+
+
+//set Routes Path
+//product
+app.use("/api",addproduct); 
+app.use("/api",getproduct);
+
+//branch
+app.use("/api",addbranch);
+app.use("/api",getbranch);
+//user
+app.use("/api",adduser);
+app.use("/api",getuser);
+
+
+
+
+// app.use("/api",data);
+
 
 
 
