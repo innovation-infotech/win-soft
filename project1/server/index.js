@@ -45,15 +45,7 @@ app.use("/api",getuser);
 
 
 
-// Database Connection
-// mongoose.connect(DB,{
-//     useNewUrlParser:true,
-//     useCreateIndex:true,
-//     useUnifiedTopalogy:true,
-//     useFindAndModify:false
-// }).then(()=>{
-//     console.log("Database Connected Successfully");
-// }).catch((err)=> console.log("Database Connection Failed"));
+
  
 // Database Connection
 mongoose.connect(DB,(err)=>{
