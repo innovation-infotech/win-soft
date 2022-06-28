@@ -6,8 +6,8 @@ const morgan = require("morgan");
 const cors = require("cors");
 // env file
 const dotenv = require('dotenv');
-dotenv.config();
-const PORT = process.env.PORT;
+dotenv.config({path:'./.env'});
+const DATABASE = process.env.DATABASE;
 
 
 // Middleware
