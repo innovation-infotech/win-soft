@@ -5,9 +5,9 @@ const mongoose = require("mongoose");
 const morgan = require("morgan");
 const cors = require("cors");
 // env file
-require('dotenv').config()
-const DB = process.env.DATABASE;
-const PORT = process.env.PORT;
+// require('dotenv').config()
+// const DB = process.env.DATABASE;
+// const PORT = process.env.PORT;
 
 
 // Middleware
@@ -42,21 +42,30 @@ app.use("/api",adduser);
 app.use("/api",getuser);
 
 
+// Database Connection
+mongoose.connect("mongodb+srv://root:root@winssoft.n4xwb.mongodb.net/winssoftdb?retryWrites=true&w=majority",(err)=>{
+    console.log("Database Connected Successfully");
+});
+
+// Listen Port Number
+app.listen(5000,()=>{
+    console.log("Server running port 5000...");
+});
 
 
 
 
  
 // Database Connection
-mongoose.connect(DB,(err)=>{
-    console.log("Database Connected Successfully");
-});
+// mongoose.connect(DB,(err)=>{
+//     console.log("Database Connected Successfully");
+// });
 
 
 // Listen Port Number
-app.listen(PORT,()=>{
-    console.log(`Server running port ${PORT}`);
-});
+// app.listen(PORT,()=>{
+//     console.log(`Server running port ${PORT}`);
+// });
 
 
 

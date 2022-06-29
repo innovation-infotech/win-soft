@@ -7,7 +7,7 @@ const Table = () => {
     
     useEffect(()=>{
         Axios.get("http://localhost:5000/api/product").then((res)=>{
-        //    console.log(res);
+        
             setLists(res.data);
         })
     },[]);

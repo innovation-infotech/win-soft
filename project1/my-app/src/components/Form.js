@@ -20,6 +20,7 @@ function Form() {
 
 //POST DATA
 const addProduct =()=>{
+   
     Axios.post('http://localhost:5000/api/product',
     {
        branch: branch,
@@ -71,7 +72,7 @@ const onKeyDown = (e) => {
   return (
     <div>
          
-        <form class="container" autoComplete="off">
+        <form class="container" autoComplete="off" onSubmit={addProduct}>
         <div className="row col-lg-12 col-md-12 col-sm-12">
             <label className="col-lg-2 col-md-4 col-sm-4" htmlFor="branch">Branch</label>
             <div className="col-lg-4 col-md-8 col-sm-8">
@@ -142,7 +143,7 @@ const onKeyDown = (e) => {
             </div>
         </div>
         <div className="col-lg-12 col-md-12 col-sm-12">
-            <button className="noselect" onClick={addProduct}>Add</button>
+            <button className="noselect" >Add</button>
         </div>
     </form>
 
