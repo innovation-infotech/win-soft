@@ -36,15 +36,15 @@ const Table = () => {
                         return(
                         <tr key={index}>
                             
-                            <td data-label="Branch">{list.branch}</td>
-                            <td data-label="Warehouse">{list.warehouse}</td>
-                            <td data-label="SupplierId">{list.supplierId}</td>
-                            <td data-label="SupplierName">{list.supplierName}</td>
-                            <td data-label="Address">{list.address}</td>
-                            <td data-label="WorkOrderNo.">{list.workorderno}</td>
-                            <td data-label="OrderNo.">{list.orderno}</td>
-                            <td data-label="Gatepass">{list.gatepass}</td>
-                            <td data-label="DC.No.">{list.dcno}</td>
+                            <td data-label="Branch" className='list'>{list.branch}</td>
+                            <td data-label="Warehouse" className='list'>{list.warehouse}</td>
+                            <td data-label="SupplierId" className='list'>{list.supplierId}</td>
+                            <td data-label="SupplierName" className='list'>{list.supplierName}</td>
+                            <td data-label="Address" className='list'>{list.address}</td>
+                            <td data-label="WorkOrderNo." className='list'>{list.workorderno}</td>
+                            <td data-label="OrderNo." className='list'>{list.orderno}</td>
+                            <td data-label="Gatepass" className='list'>{list.gatepass}</td>
+                            <td data-label="DC.No." className='list'>{list.dcno}</td>
                         </tr>
                         )
                        })}

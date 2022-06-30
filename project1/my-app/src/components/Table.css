@@ -11,7 +11,7 @@
 }
 .table td,.table th{
     padding:12px 15px;
-    border:1px solid #ddd;
+    border: 1px solid #ddd;
     text-align: center;
     font-size:16px;
     font-family: 'Montserrat', sans-serif;
@@ -26,7 +26,7 @@
       background-color: #f5f5f5;
   }
   
-@media (max-width: 500px){
+@media (max-width: 720px){
     .table thead{
         display: none;
     }
@@ -35,22 +35,33 @@
         width:100%;
     }
     table tr{
+        padding: 15px;
+        border-radius: 10px;
         margin-bottom: 15px;
+        background: rgba( 255, 255, 255, 0.2 );
+        backdrop-filter: blur( 4px );
+        -webkit-backdrop-filter: blur( 4px );
+        border-radius: 10px;
     }
 	.table td{
-		text-align: right;
+        border-radius: 10px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        background-image: linear-gradient(360deg, #ffffff 80%, #f5f5f5 100%);
+        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 		padding-left: 50%;
-		text-align: right;
-		position: relative;
+        text-align: left;
+        width: auto;
+        margin-top: 5px;
+        margin-left: 35%;
 	}
 	.table td::before{
 		content: attr(data-label);
 		position: absolute;
 		left:0;
-		width: 50%;
-		padding-left:15px;
-		font-size:15px;
+        border-radius: 10px;
+		width: 35%;
 		font-weight: bold;
-		text-align: left;
+		text-align: right;
 	}
 }
