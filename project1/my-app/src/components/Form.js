@@ -106,7 +106,7 @@ const onKeyDown = (e) => {
                 <input className="form-control" onKeyDown={onKeyDown} value={supplierId} onChange={(e) => setSupplierId(e.target.value)}    />
             </div>
             <div className="col-lg-3 col-md-5 col-sm-5">
-            <input type="text" className="form-control" value={capital && capital.name } name="supplierName" onChange={e =>setSupplierName(e.target.value)} />
+            <input type="text" className="form-control mt-1 mt-sm-0" value={capital && capital.name } name="supplierName" onChange={e =>setSupplierName(e.target.value)} />
             </div>
         </div>
         <div className="row col-lg-12 col-md-12 col-sm-12">
@@ -139,11 +139,11 @@ const onKeyDown = (e) => {
                 <input type="text" className="form-control" name="dcno" value={dcno}  onChange={(e) =>{setDcno(e.target.value)}} required />
             </div>
             <div className="col-lg-2 col-md-4 col-sm-4">
-                <input type="date" id="date" className="form-control"></input>
+                <input type="date" id="date" className="form-control mt-1 mt-sm-0"></input>
             </div>
         </div>
         <div className="col-lg-12 col-md-12 col-sm-12">
-            <button className="noselect" >Add</button>
+            <button className="noselect mt-2 mt-sm-0" >Add</button>
         </div>
     </form>
 
