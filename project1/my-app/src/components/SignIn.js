@@ -74,7 +74,7 @@ const onKeyDown = (e) => {
          
         <form class="container" autoComplete="off" onSubmit={addProduct}>
         <div className="row col-lg-12 col-md-12 col-sm-12">
-            <label className="col-lg-2 col-md-4 col-sm-4" htmlFor="erpName">ERP Name</label>
+            <label className="col-lg-2 col-md-4 col-sm-4" htmlFor="erpName">Name of the ERP</label>
             <div className="col-lg-4 col-md-8 col-sm-8">
                 <select className="form-control" required value={branch} onChange={(e)=>{setBranch(e.target.value)}} >
                 <option value={0}>Select</option> 
@@ -99,19 +99,19 @@ const onKeyDown = (e) => {
             </div>
         </div>
         <div className="row col-lg-12 col-md-12 col-sm-12">
-            <label htmlFor="address" className="col-lg-2 col-md-4 col-sm-4">Company Name</label>
+            <label htmlFor="address" className="col-lg-2 col-md-4 col-sm-4">Name of the Company</label>
             <div className="col-lg-4 col-md-8 col-sm-8">
                 <input type="text" className="form-control" name="address" value={address} onChange={(e) =>{setAddress(e.target.value)}} required />
             </div>
         </div>
         <div className="row col-lg-12 col-md-12 col-sm-12">
-            <label htmlFor="workorderno" className="col-lg-2 col-md-4 col-sm-4">Branch</label>
+            <label htmlFor="workorderno" className="col-lg-2 col-md-4 col-sm-4">Name of the Branch</label>
             <div className="col-lg-4 col-md-8 col-sm-8">
             <input type="text" className="form-control" name="workorderno" value={workorderno} onChange={(e) =>{setWorkorderno(e.target.value)}} required />
             </div>
         </div>
         <div className="row col-lg-12 col-md-12 col-sm-12">
-            <label htmlFor="orderno" className="col-lg-2 col-md-4 col-sm-4">Warehouse</label>
+            <label htmlFor="orderno" className="col-lg-2 col-md-4 col-sm-4">Name of the Warehouse</label>
             <div className="col-lg-4 col-md-8 col-sm-8">
                 <input type="text" className="form-control" name="orderno" value={orderno} onChange={(e) =>{setOrderno(e.target.value)}} required  />
             </div>
