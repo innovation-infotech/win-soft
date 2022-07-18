@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/win-soft/static/css/main.4b8228a4.css",
-    "main.js": "/win-soft/static/js/main.e1333d33.js",
+    "main.js": "/win-soft/static/js/main.ac214a23.js",
     "index.html": "/win-soft/index.html",
     "main.4b8228a4.css.map": "/win-soft/static/css/main.4b8228a4.css.map",
-    "main.e1333d33.js.map": "/win-soft/static/js/main.e1333d33.js.map"
+    "main.ac214a23.js.map": "/win-soft/static/js/main.ac214a23.js.map"
   },
   "entrypoints": [
     "static/css/main.4b8228a4.css",
-    "static/js/main.e1333d33.js"
+    "static/js/main.ac214a23.js"
   ]
 }
